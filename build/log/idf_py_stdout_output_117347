@@ -1,0 +1,59 @@
+Command: cmake -G Ninja -B /home/raj/projects/esp32-led-controller/esp32-led-controller/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/raj/.espressif/python_env/idf6.1_py3.12_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/raj/projects/esp32-led-controller/esp32-led-controller
+-- IDF_TARGET not set, using default target: esp32
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- Component directory /home/raj/esp-idf/components/idf_test does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - OFF
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/raj/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/raj/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/raj/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5;esp32c61 SoCs
+-- KCONFIG_REPORT_VERBOSITY not set, using default
+-- Project sdkconfig file /home/raj/projects/esp32-led-controller/esp32-led-controller/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- App "esp32-led-controller" version: 1
+-- Found Python3: /home/raj/.espressif/python_env/idf6.1_py3.12_env/bin/python (found version "3.12.3") found components: Interpreter 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- Setting up mbedtls configuration
+-- Linkage type is PUBLIC
+-- Adding linker script /home/raj/esp-idf/components/esp_system/ld/esp32/memory.ld.in
+--   -> Preprocessing .in script: /home/raj/esp-idf/components/esp_system/ld/esp32/memory.ld.in
+-- Adding linker script /home/raj/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Preprocessing .in script: /home/raj/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Applying ldgen processing: /home/raj/projects/esp32-led-controller/esp32-led-controller/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/raj/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/raj/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/raj/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/raj/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script /home/raj/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Component idf::esp_trace will be linked with -Wl,--whole-archive
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_blockdev esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_bitscrambler esp_driver_cam esp_driver_dac esp_driver_dma esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_i3c esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sd_intf esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_twai esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hal_ana_cmpr esp_hal_ana_conv esp_hal_cam esp_hal_clock esp_hal_dma esp_hal_emac esp_hal_gpio esp_hal_gpspi esp_hal_i2c esp_hal_i2s esp_hal_i3c esp_hal_ieee802154 esp_hal_jpeg esp_hal_lcd esp_hal_ledc esp_hal_mcpwm esp_hal_mspi esp_hal_parlio esp_hal_pcnt esp_hal_pmu esp_hal_ppa esp_hal_rmt esp_hal_rtc_timer esp_hal_sd esp_hal_security esp_hal_systimer esp_hal_timg esp_hal_touch_sens esp_hal_twai esp_hal_uart esp_hal_usb esp_hal_wdt esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_libc esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_stdio esp_system esp_timer esp_trace esp_usb_cdc_rom_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser ieee802154 log lwip main mbedtls nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sdmmc soc spi_flash spiffs tcp_transport ulp unity vfs wear_levelling wpa_supplicant xtensa
+-- Component paths: /home/raj/esp-idf/components/app_trace /home/raj/esp-idf/components/app_update /home/raj/esp-idf/components/bootloader /home/raj/esp-idf/components/bootloader_support /home/raj/esp-idf/components/bt /home/raj/esp-idf/components/cmock /home/raj/esp-idf/components/console /home/raj/esp-idf/components/cxx /home/raj/esp-idf/components/driver /home/raj/esp-idf/components/efuse /home/raj/esp-idf/components/esp-tls /home/raj/esp-idf/components/esp_adc /home/raj/esp-idf/components/esp_app_format /home/raj/esp-idf/components/esp_blockdev /home/raj/esp-idf/components/esp_bootloader_format /home/raj/esp-idf/components/esp_coex /home/raj/esp-idf/components/esp_common /home/raj/esp-idf/components/esp_driver_ana_cmpr /home/raj/esp-idf/components/esp_driver_bitscrambler /home/raj/esp-idf/components/esp_driver_cam /home/raj/esp-idf/components/esp_driver_dac /home/raj/esp-idf/components/esp_driver_dma /home/raj/esp-idf/components/esp_driver_gpio /home/raj/esp-idf/components/esp_driver_gptimer /home/raj/esp-idf/components/esp_driver_i2c /home/raj/esp-idf/components/esp_driver_i2s /home/raj/esp-idf/components/esp_driver_i3c /home/raj/esp-idf/components/esp_driver_isp /home/raj/esp-idf/components/esp_driver_jpeg /home/raj/esp-idf/components/esp_driver_ledc /home/raj/esp-idf/components/esp_driver_mcpwm /home/raj/esp-idf/components/esp_driver_parlio /home/raj/esp-idf/components/esp_driver_pcnt /home/raj/esp-idf/components/esp_driver_ppa /home/raj/esp-idf/components/esp_driver_rmt /home/raj/esp-idf/components/esp_driver_sd_intf /home/raj/esp-idf/components/esp_driver_sdio /home/raj/esp-idf/components/esp_driver_sdm /home/raj/esp-idf/components/esp_driver_sdmmc /home/raj/esp-idf/components/esp_driver_sdspi /home/raj/esp-idf/components/esp_driver_spi /home/raj/esp-idf/components/esp_driver_touch_sens /home/raj/esp-idf/components/esp_driver_tsens /home/raj/esp-idf/components/esp_driver_twai /home/raj/esp-idf/components/esp_driver_uart /home/raj/esp-idf/components/esp_driver_usb_serial_jtag /home/raj/esp-idf/components/esp_eth /home/raj/esp-idf/components/esp_event /home/raj/esp-idf/components/esp_gdbstub /home/raj/esp-idf/components/esp_hal_ana_cmpr /home/raj/esp-idf/components/esp_hal_ana_conv /home/raj/esp-idf/components/esp_hal_cam /home/raj/esp-idf/components/esp_hal_clock /home/raj/esp-idf/components/esp_hal_dma /home/raj/esp-idf/components/esp_hal_emac /home/raj/esp-idf/components/esp_hal_gpio /home/raj/esp-idf/components/esp_hal_gpspi /home/raj/esp-idf/components/esp_hal_i2c /home/raj/esp-idf/components/esp_hal_i2s /home/raj/esp-idf/components/esp_hal_i3c /home/raj/esp-idf/components/esp_hal_ieee802154 /home/raj/esp-idf/components/esp_hal_jpeg /home/raj/esp-idf/components/esp_hal_lcd /home/raj/esp-idf/components/esp_hal_ledc /home/raj/esp-idf/components/esp_hal_mcpwm /home/raj/esp-idf/components/esp_hal_mspi /home/raj/esp-idf/components/esp_hal_parlio /home/raj/esp-idf/components/esp_hal_pcnt /home/raj/esp-idf/components/esp_hal_pmu /home/raj/esp-idf/components/esp_hal_ppa /home/raj/esp-idf/components/esp_hal_rmt /home/raj/esp-idf/components/esp_hal_rtc_timer /home/raj/esp-idf/components/esp_hal_sd /home/raj/esp-idf/components/esp_hal_security /home/raj/esp-idf/components/esp_hal_systimer /home/raj/esp-idf/components/esp_hal_timg /home/raj/esp-idf/components/esp_hal_touch_sens /home/raj/esp-idf/components/esp_hal_twai /home/raj/esp-idf/components/esp_hal_uart /home/raj/esp-idf/components/esp_hal_usb /home/raj/esp-idf/components/esp_hal_wdt /home/raj/esp-idf/components/esp_hid /home/raj/esp-idf/components/esp_http_client /home/raj/esp-idf/components/esp_http_server /home/raj/esp-idf/components/esp_https_ota /home/raj/esp-idf/components/esp_https_server /home/raj/esp-idf/components/esp_hw_support /home/raj/esp-idf/components/esp_lcd /home/raj/esp-idf/components/esp_libc /home/raj/esp-idf/components/esp_local_ctrl /home/raj/esp-idf/components/esp_mm /home/raj/esp-idf/components/esp_netif /home/raj/esp-idf/components/esp_netif_stack /home/raj/esp-idf/components/esp_partition /home/raj/esp-idf/components/esp_phy /home/raj/esp-idf/components/esp_pm /home/raj/esp-idf/components/esp_psram /home/raj/esp-idf/components/esp_ringbuf /home/raj/esp-idf/components/esp_rom /home/raj/esp-idf/components/esp_security /home/raj/esp-idf/components/esp_stdio /home/raj/esp-idf/components/esp_system /home/raj/esp-idf/components/esp_timer /home/raj/esp-idf/components/esp_trace /home/raj/esp-idf/components/esp_usb_cdc_rom_console /home/raj/esp-idf/components/esp_wifi /home/raj/esp-idf/components/espcoredump /home/raj/esp-idf/components/esptool_py /home/raj/esp-idf/components/fatfs /home/raj/esp-idf/components/freertos /home/raj/esp-idf/components/hal /home/raj/esp-idf/components/heap /home/raj/esp-idf/components/http_parser /home/raj/esp-idf/components/ieee802154 /home/raj/esp-idf/components/log /home/raj/esp-idf/components/lwip /home/raj/projects/esp32-led-controller/esp32-led-controller/main /home/raj/esp-idf/components/mbedtls /home/raj/esp-idf/components/nvs_flash /home/raj/esp-idf/components/nvs_sec_provider /home/raj/esp-idf/components/openthread /home/raj/esp-idf/components/partition_table /home/raj/esp-idf/components/perfmon /home/raj/esp-idf/components/protobuf-c /home/raj/esp-idf/components/protocomm /home/raj/esp-idf/components/pthread /home/raj/esp-idf/components/rt /home/raj/esp-idf/components/sdmmc /home/raj/esp-idf/components/soc /home/raj/esp-idf/components/spi_flash /home/raj/esp-idf/components/spiffs /home/raj/esp-idf/components/tcp_transport /home/raj/esp-idf/components/ulp /home/raj/esp-idf/components/unity /home/raj/esp-idf/components/vfs /home/raj/esp-idf/components/wear_levelling /home/raj/esp-idf/components/wpa_supplicant /home/raj/esp-idf/components/xtensa
+-- Configuring done (24.9s)
+-- Generating done (1.5s)
+-- Build files have been written to: /home/raj/projects/esp32-led-controller/esp32-led-controller/build

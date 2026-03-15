@@ -1,0 +1,2 @@
+source /home/raj/projects/esp32-led-controller/esp32-led-controller/build/bootloader/gdbinit/symbols
+source /home/raj/projects/esp32-led-controller/esp32-led-controller/build/bootloader/gdbinit/connect
