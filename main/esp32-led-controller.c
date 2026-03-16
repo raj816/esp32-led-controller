@@ -12,8 +12,9 @@
 #define PRIORITY_UART   2
 #define PRIORITY_SENSOR 1
 
-// Queue handle - for sending commands to LED task
-QueueHandle_t led_queue;
+
+QueueHandle_t led_queue;// Queue handle - for sending commands to LED task
+SemaphoreHandle_t uart_mutex; // Mutex for UART access
 
 // LED Commands
 typedef enum {
@@ -23,6 +24,14 @@ typedef enum {
     CMD_FAST,
     CMD_SLOW
 } led_command_t;
+
+//safe UART print function -only one task can print at a time
+void safe_print(const char *msg)
+{
+    xSemaphoreTake(uart_mutex, portMAX_DELAY);
+    printf("%s", msg);
+    xSemaphoreGive(uart_mutex);
+} 
 
 //======================
 // TASK 1: LED Control
@@ -42,23 +51,23 @@ void led_task(void *pvParameters) {
             switch(cmd) {
                 case CMD_ON:
                     gpio_set_level(LED_PIN, 1);
-                    printf("[LED] ON\n");
+                    safe_print("[LED] ON\n");
                     break;
                 case CMD_OFF:
                     gpio_set_level(LED_PIN, 0);
-                    printf("[LED] OFF\n");
+                    safe_print("[LED] OFF\n");
                     break;
                 case CMD_TOGGLE:
                     gpio_set_level(LED_PIN, !gpio_get_level(LED_PIN));
-                    printf("[LED] TOGGLED\n");
+                    safe_print("[LED] TOGGLED\n");
                     break;
                 case CMD_FAST:
                     blink_delay = 200;
-                    printf("[LED] Fast blink mode\n");
+                    safe_print("[LED] Fast blink mode\n");
                     break;
                 case CMD_SLOW:
                     blink_delay = 1000;
-                    printf("[LED] Slow blink mode\n");
+                    safe_print("[LED] Slow blink mode\n");
                     break;
             }
         } else {
@@ -122,10 +131,11 @@ void app_main(void) {
     printf("  3 tasks running concurrently\n");
     printf("================================\n\n");
 
-    // Create queue for LED commands
-    led_queue = xQueueCreate(10, sizeof(led_command_t));
+    uart_mutex = xSemaphoreCreateMutex(); // mutex for UART access
+    led_queue = xQueueCreate(10, sizeof(led_command_t));// queue for LED commands
+    
 
-    // Create tasks
+    //  tasks
     xTaskCreate(led_task,    "LED",    2048, NULL, PRIORITY_LED,    NULL);
     xTaskCreate(uart_task,   "UART",   2048, NULL, PRIORITY_UART,   NULL);
     xTaskCreate(sensor_task, "SENSOR", 2048, NULL, PRIORITY_SENSOR, NULL);
